@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0df621b-28d6-4eab-bc1c-292726da1cee">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Seccion" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="dsreport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="385" y="25" width="156" height="20" uuid="ec613772-802b-4d24-9021-51817d4d6867"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Seccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="227" y="25" width="88" height="20" forecolor="#000000" uuid="494d2293-f99c-4eca-a454-bd097372cbe3"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DIRECTORIO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="35" y="6" width="78" height="65" uuid="3423c2a4-0a32-4390-b0bd-7fc8638a285e"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="385" y="45" width="156" height="20" uuid="e9f2e33c-a6b7-470f-a2e9-3b347abf3b2d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="88" splitType="Stretch">
+			<subreport>
+				<reportElement x="35" y="18" width="506" height="70" uuid="38d27aa9-d88c-45a2-9a7e-f28f88fa6c58"/>
+				<dataSourceExpression><![CDATA[$F{dsreport}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "rptDirectorio.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="15" uuid="7dc3cd7b-ede4-4a89-91de-3f1716c55f1a"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="0" width="238" height="15" uuid="51405307-b6ee-4871-a9a0-b6a2532a6da9"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

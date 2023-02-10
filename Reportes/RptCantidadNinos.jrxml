@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="426eed04-b522-4718-a634-44aa6e690ece">
+	<property name="ireport.zoom" value="1.1269722013523664"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="matriculado" class="java.lang.String"/>
+	<parameter name="alimentacionsi" class="java.lang.String"/>
+	<parameter name="alimentacionno" class="java.lang.String"/>
+	<parameter name="asistiosi" class="java.lang.String"/>
+	<parameter name="asistiono" class="java.lang.String"/>
+	<parameter name="alimentacionsiasistio" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<field name="aula" class="java.lang.String"/>
+	<field name="matriculados" class="java.lang.String"/>
+	<field name="conAlimentacion" class="java.lang.String"/>
+	<field name="sinAlimentacion" class="java.lang.String"/>
+	<field name="siAsistieron" class="java.lang.String"/>
+	<field name="noAsistieron" class="java.lang.String"/>
+	<field name="alimentacionHoy" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="55" width="81" height="20" uuid="42e8f8e0-c562-4121-9bbd-5e2fc081a933"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Generado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="11" width="335" height="29" forecolor="#0000CC" uuid="d3e8371d-29ba-460c-9ad5-ad93e856bb7d"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineColor="#000000"/>
+					<leftPen lineColor="#000000"/>
+					<bottomPen lineColor="#000000"/>
+					<rightPen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE ALUMNOS RESUMEN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="75" width="215" height="20" uuid="98270d74-be13-4fb3-8e5c-9a92ce1d315f"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="0" width="91" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULADOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="0" width="163" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="27" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="119" height="15" uuid="a5dc4590-8847-4023-8cb8-18d918242a15"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CON S. ALIMENTACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="119" height="15" uuid="c7ec72a2-0b5f-496e-a8de-e96985998426"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SIN S. ALIMENTACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="529" y="0" width="70" height="15" uuid="7b55e785-5434-4cf7-ae05-61ac12f0bfca"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASISTIERON]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="599" y="0" width="60" height="15" uuid="f1999b7e-b698-42ff-98ad-fd65fc83c4f6"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FALTARON]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="659" y="0" width="119" height="15" uuid="342359ee-a634-41fb-bf34-9eae4507af33"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S. ALIMENTACION HOY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="27" height="18" uuid="be2eac49-142e-463a-acdd-cc4ce8ba332e"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="91" height="18" uuid="a746ce28-89e9-4dcc-81bb-de2ba470f8e0"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{matriculados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="119" height="18" uuid="f9961c34-5ae1-4734-b7fb-7783a64be87f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{conAlimentacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="119" height="18" uuid="474c99f3-60e3-469f-a195-902e30c7abce"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sinAlimentacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="0" width="70" height="18" uuid="3f397012-8d5b-4c3f-beb9-5217c6217b17"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{siAsistieron}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="0" width="60" height="18" uuid="01def9d9-f668-4941-a8a5-2e037f574d4f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{noAsistieron}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="659" y="0" width="119" height="18" uuid="d7efff29-2a30-49b4-b0e1-8f2532a6bd37"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alimentacionHoy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="0" width="163" height="18" uuid="620106ea-0f50-479d-abe5-5198dd590040"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{aula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="0" width="91" height="16" uuid="a4aedd96-0c7c-460d-8e0e-96d39087ab9f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{matriculado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="119" height="16" uuid="f07c2e35-6520-48f9-902c-593aee464383"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alimentacionsi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="119" height="16" uuid="6c7a7a5e-27cd-457a-8203-c6c1cb387999"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alimentacionno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="529" y="0" width="70" height="16" uuid="397aa041-afee-4bcd-b415-2b6f56a5a216"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{asistiosi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="599" y="0" width="60" height="16" uuid="25f317ba-c87d-438b-8599-228f5e61e0f1"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{asistiono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="659" y="0" width="119" height="16" uuid="01ba099b-99b4-44d3-bfd6-a17b46d5fb59"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alimentacionsiasistio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="37" y="0" width="163" height="16" uuid="5fed7819-0961-4574-86ae-eb6b0a95ef7f"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Totales:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="0e5b6831-06fe-450a-bc85-20189f10592f">
+	<property name="ireport.zoom" value="1.6500000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NO_DATA_ADAPTER"/>
+	<parameter name="nino" class="java.lang.String"/>
+	<parameter name="aula" class="java.lang.String"/>
+	<parameter name="tot" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<field name="concepto" class="java.lang.String"/>
+	<field name="vencimiento" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="pendiente" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="229" splitType="Stretch">
+			<staticText>
+				<reportElement x="221" y="20" width="104" height="20" forecolor="#000000" uuid="cdecafa5-eeb9-4280-b963-f69f0dfcbb6e"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NOTIFICACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="47" width="130" height="20" forecolor="#000000" uuid="cdecafa5-eeb9-4280-b963-f69f0dfcbb6e"/>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PAGO PENDIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="80" width="200" height="17" uuid="915cfe05-bd85-4c5b-bcbb-b7045ec85330"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Estimado Padre de Familia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="110" width="509" height="40" uuid="915cfe05-bd85-4c5b-bcbb-b7045ec85330"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Ante todo, hacerle llegar nuestro saludo, la presente es para instarlo a cumplir con la cancelación de los pagos con vencimiento en el presente mes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="161" width="50" height="20" uuid="fbbc9cbc-f919-452e-9f5f-106c5453ba3a"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Niño (a):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="185" width="49" height="20" uuid="574c2220-dc8b-47fa-9384-5fc324f80604"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Aula:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="119" y="185" width="249" height="20" uuid="b1f94999-5238-4557-9328-03250f2b802b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="161" width="249" height="20" uuid="7a63c723-39e0-404e-916b-98c001a683c0"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nino}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="440" y="10" width="69" height="57" uuid="2cd1cf87-d43b-4f08-b1f4-9739e91a9eda"/>
+				<imageExpression><![CDATA[new File($P{logo})]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="182" height="15" uuid="486c2cdc-c932-405d-980f-aa330a051578"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#0000CC"/>
+					<topPen lineWidth="1.0" lineColor="#0000CC"/>
+					<leftPen lineWidth="1.0" lineColor="#0000CC"/>
+					<bottomPen lineWidth="1.0" lineColor="#0000CC"/>
+					<rightPen lineWidth="1.0" lineColor="#0000CC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONCEPTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="0" width="47" height="15" uuid="486c2cdc-c932-405d-980f-aa330a051578"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#0000CC"/>
+					<topPen lineWidth="1.0" lineColor="#0000CC"/>
+					<leftPen lineWidth="1.0" lineColor="#0000CC"/>
+					<bottomPen lineWidth="1.0" lineColor="#0000CC"/>
+					<rightPen lineWidth="1.0" lineColor="#0000CC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="70" height="15" uuid="486c2cdc-c932-405d-980f-aa330a051578"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#0000CC"/>
+					<topPen lineWidth="1.0" lineColor="#0000CC"/>
+					<leftPen lineWidth="1.0" lineColor="#0000CC"/>
+					<bottomPen lineWidth="1.0" lineColor="#0000CC"/>
+					<rightPen lineWidth="1.0" lineColor="#0000CC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="0" width="97" height="15" uuid="486c2cdc-c932-405d-980f-aa330a051578"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#0000CC"/>
+					<topPen lineWidth="1.0" lineColor="#0000CC"/>
+					<leftPen lineWidth="1.0" lineColor="#0000CC"/>
+					<bottomPen lineWidth="1.0" lineColor="#0000CC"/>
+					<rightPen lineWidth="1.0" lineColor="#0000CC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEC. VENCIMIENTO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="379" y="0" width="97" height="14" uuid="5471fee7-521e-4792-987a-4bf3296a6fd9"/>
+				<box leftPadding="8">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vencimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="182" height="14" uuid="368aff84-71f3-40f3-b73b-aced27734765"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="0" width="47" height="14" uuid="0638bafe-ac63-4a2b-b4db-756caefe9bcf"/>
+				<box leftPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="0" width="70" height="14" uuid="4b689670-c438-4586-8dbb-562ace4f3dfd"/>
+				<box leftPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{pendiente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="172" splitType="Stretch">
+			<staticText>
+				<reportElement x="355" y="2" width="58" height="16" uuid="09a7c322-2feb-4bf9-b3fd-5d840a88607b"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Deuda:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="2" width="63" height="16" uuid="7b83fb6c-1703-4816-8362-762e1f9c173e"/>
+				<box leftPadding="4"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tot}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="50" width="509" height="40" uuid="b2953556-9243-4f80-819e-8b4d0597a698"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Agradecemos de antemano su compromiso y responsabilidad con la educación de su hijo y recuerde que las mensualidades pagadas dentro del plazo legal tienen un descuento adicional.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="110" width="110" height="20" uuid="c6cf7410-46eb-4915-a55b-daedeb92fa4d"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Atentamente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="136" width="110" height="20" uuid="707dde02-12e1-41d8-887a-8589e718c538"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[La Dirección.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

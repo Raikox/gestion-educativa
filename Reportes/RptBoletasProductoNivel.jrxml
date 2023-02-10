@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="123e53dc-2882-4b72-a19e-2b74c2ec3cc0">
+	<property name="ireport.zoom" value="1.3636363636363635"/>
+	<property name="ireport.x" value="121"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="inicio" class="java.lang.String"/>
+	<parameter name="fin" class="java.lang.String"/>
+	<parameter name="nivel" class="java.lang.String"/>
+	<parameter name="opcion" class="java.lang.String"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call sp_R_BoletaProductoNivel($P{inicio},$P{fin},$P{nivel},$P{opcion})]]>
+	</queryString>
+	<field name="num_boleta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos_nombres" class="java.lang.String"/>
+	<field name="desc_detalle" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto_histo" class="java.lang.Double"/>
+	<field name="fecha_boleta" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo_histo" class="java.lang.String"/>
+	<field name="total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="249" y="0" width="132" height="29" forecolor="#0000CC" uuid="4cdb2fea-ebba-42e7-8343-182b1ea41aa3"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineColor="#000000"/>
+					<leftPen lineColor="#000000"/>
+					<bottomPen lineColor="#000000"/>
+					<rightPen lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Boletas]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="622" y="19" width="142" height="20" uuid="d17a70f4-0bd0-4bbb-8f24-156f6000cbde"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="0" width="205" height="29" forecolor="#0000CC" uuid="e916bd2a-8742-4cc1-bcc7-dfe2036cd781"/>
+				<textElement verticalAlignment="Middle">
+					<font size="17" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="61" y="0" width="64" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° Boleta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="0" width="239" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="0" width="45" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="0" width="57" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="10">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="0" width="244" height="15" uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56"/>
+				<box leftPadding="0">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="61" y="0" width="64" height="17" uuid="28981299-ae05-4b57-8519-dbb21083bea0"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_boleta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="244" height="17" uuid="1c70a7b4-2055-4190-960b-48037605412c"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{apellidos_nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="0" width="239" height="17" uuid="716745af-8077-44f8-b305-172ef076ffa3"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{desc_detalle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="608" y="0" width="45" height="17" uuid="b3c7b9ad-ff6d-4621-9a9a-0eee1a724f45"/>
+				<box leftPadding="0">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{monto_histo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="653" y="0" width="57" height="17" uuid="571183b4-54d4-443d-9c29-3cdee526250c"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_boleta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="540" y="0" width="68" height="20" uuid="0720dd51-8f62-4008-acbe-cd06af4f3af3"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suma Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="608" y="0" width="100" height="20" uuid="06b7ee76-1330-4415-85be-29b42f4d775e"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

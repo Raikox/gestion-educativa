@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="380" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="20" uuid="93602382-fabb-43fc-bf0b-2ec7db56e96f">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="monto" class="java.lang.String"/>
+	<parameter name="operacion" class="java.lang.String"/>
+	<field name="concepto" class="java.lang.String"/>
+	<field name="unitario" class="java.lang.String"/>
+	<field name="importe" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="149" splitType="Stretch">
+			<textField>
+				<reportElement x="325" y="97" width="100" height="20" uuid="0aec5f73-8079-4947-9e1e-5cc032a8b66a"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="97" width="237" height="20" uuid="7d4203f1-bdf3-436a-b668-a276ea93cb74"/>
+				<textFieldExpression><![CDATA[$P{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="42" width="140" height="20" uuid="e51b1213-3acc-41fd-94af-d9a8a4702a2e"/>
+				<textFieldExpression><![CDATA[$P{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="80" width="100" height="16" uuid="e1bee48c-7ecd-453e-8f51-9a0091ae5e91"/>
+				<textFieldExpression><![CDATA["op: "+$P{operacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="14">
+			<textField>
+				<reportElement x="50" y="0" width="252" height="14" uuid="2b97324e-7d53-4c1b-a117-531b17868d5b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="55" height="14" uuid="c631dc1b-e6e9-4a33-8b4d-7755b228ac54"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="0" width="56" height="14" uuid="6107efc8-95e3-447a-bfec-2e306ae083e3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{importe}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="26">
+			<textField>
+				<reportElement x="369" y="2" width="56" height="20" uuid="3dd649ef-b2cb-4ddb-8628-6ae3f729a85d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{monto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="325" y="2" width="44" height="20" uuid="3aa43dbf-306a-4b75-815f-30c1b6861326"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

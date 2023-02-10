@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4fa7dc44-e3b6-44b7-8943-4f733dbeea97">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="seccion" class="java.lang.String"/>
+	<parameter name="salida" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call sp_R_SalidaSalon($P{salida},$P{seccion})]]>
+	</queryString>
+	<field name="id_alumno" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alumno" class="java.lang.String"/>
+	<field name="horarioe_matricula" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarios_matricula" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="96" y="15" width="198" height="29" forecolor="#0000CC" uuid="ed566e7f-6d7b-4731-8b40-61973a87cea9"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineColor="#000000"/>
+					<leftPen lineColor="#000000"/>
+					<bottomPen lineColor="#000000"/>
+					<rightPen lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SALIDA ALUMNOS SALÓN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="294" y="15" width="196" height="29" forecolor="#0000CC" uuid="004a1e93-ac37-4ca3-b781-e193b974201b"/>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{seccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="417" y="0" width="62" height="15" uuid="2557fd4f-2b27-42ef-9fb3-ae32610e49cb"/>
+				<box leftPadding="10">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[H. Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="0" width="63" height="15" uuid="33bce45a-2bc9-40e3-b8fc-d6ebfbe91c0c"/>
+				<box leftPadding="8">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[H. Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="0" width="23" height="15" uuid="cafe5dfb-c641-4e4a-9e99-76a993129b0a"/>
+				<box topPadding="2" leftPadding="6">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="0" width="282" height="15" uuid="e2442108-ca1c-4b29-bd1b-4f2a5290f16e"/>
+				<box leftPadding="114">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="0" width="282" height="15" uuid="8fe19919-9f75-4462-ae9a-38219e9ca076"/>
+				<box leftPadding="3">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="62" height="15" uuid="d4dd610e-ee5d-43a1-a37d-58d4f3d2ec00"/>
+				<box leftPadding="3">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{horarios_matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="63" height="15" uuid="b82509d9-0b25-4d03-ac58-0db92f47b1f2"/>
+				<box leftPadding="3">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{horarioe_matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="23" height="15" uuid="b3ee3c69-8d7f-487c-a335-ca50c5d35d56"/>
+				<box leftPadding="2">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

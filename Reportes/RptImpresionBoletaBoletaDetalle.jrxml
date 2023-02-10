@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="380" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="93602382-fabb-43fc-bf0b-2ec7db56e96f">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="concepto" class="java.lang.String"/>
+	<field name="unitario" class="java.lang.String"/>
+	<field name="importe" class="java.lang.String"/>
+	<field name="monto" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="14">
+			<textField>
+				<reportElement x="28" y="0" width="252" height="14" uuid="2b97324e-7d53-4c1b-a117-531b17868d5b"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="55" height="14" uuid="c631dc1b-e6e9-4a33-8b4d-7755b228ac54"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="56" height="14" uuid="6107efc8-95e3-447a-bfec-2e306ae083e3"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{importe}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="23">
+			<staticText>
+				<reportElement x="303" y="2" width="44" height="20" uuid="3aa43dbf-306a-4b75-815f-30c1b6861326"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="347" y="2" width="100" height="20" uuid="b289c420-8a2d-46ad-880c-c63fdf8edd26"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

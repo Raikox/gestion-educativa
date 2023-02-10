@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="426eed04-b522-4718-a634-44aa6e690ece">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="op" class="java.lang.String"/>
+	<parameter name="aux" class="java.lang.String"/>
+	<parameter name="salon" class="java.lang.String"/>
+	<field name="alumno" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="pendiente" class="java.lang.String"/>
+	<field name="vencimiento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="d17a70f4-0bd0-4bbb-8f24-156f6000cbde" x="397" y="44" width="142" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dc7e22d4-cc4d-4650-b9e6-2792a536d4fc" x="119" y="10" width="310" height="29" forecolor="#0000FF"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{op}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e08fd639-9fcd-4319-872d-1d5811dcefad" x="82" y="44" width="153" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{salon}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="42e8f8e0-c562-4121-9bbd-5e2fc081a933" x="10" y="44" width="72" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periodo/Aula:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56" x="251" y="0" width="91" height="15"/>
+				<box leftPadding="30">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56" x="37" y="0" width="214" height="15"/>
+				<box leftPadding="60">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56" x="439" y="0" width="98" height="15"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FEC.VENCIMIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56" x="342" y="0" width="97" height="15"/>
+				<box leftPadding="20">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bc79b49e-af3f-4ab9-acfc-3baa84905e56" x="10" y="0" width="27" height="15"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#000099"/>
+					<topPen lineWidth="1.0" lineColor="#000099"/>
+					<leftPen lineWidth="1.0" lineColor="#000099"/>
+					<bottomPen lineWidth="1.0" lineColor="#000099"/>
+					<rightPen lineWidth="1.0" lineColor="#000099"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement uuid="fa6963b4-798c-447a-a75c-d29286e49e91" x="37" y="0" width="214" height="17"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="63742964-1d78-43af-b61a-c88f26626c08" x="251" y="0" width="91" height="17"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d0aa5277-0586-4d99-b932-7aef5dbc8d9d" x="342" y="0" width="97" height="17"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pendiente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a1752093-c3db-46ae-978a-097df87fa66b" x="439" y="0" width="98" height="17"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vencimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="56301e3b-cf88-485e-a34b-b20bb53c0714" x="10" y="0" width="27" height="17"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement uuid="45095414-5fe3-4304-8554-04a6c109889e" x="251" y="3" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{aux}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="999b2371-b39a-4352-a44b-3bd831a5d098" x="213" y="3" width="38" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

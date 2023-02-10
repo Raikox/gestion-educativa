@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e207babe-8e61-46ce-85cf-3d39f57b8d35">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="auxi" class="java.lang.String"/>
+	<parameter name="auxe" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="dsreport1" class="java.util.List" isForPrompting="false"/>
+	<parameter name="dsreport2" class="java.util.List" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D://» Documentos//Java Proyects//PryMatricula//Reportes//"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<staticText>
+				<reportElement x="234" y="7" width="82" height="24" forecolor="#0000CC" uuid="4cdb2fea-ebba-42e7-8343-182b1ea41aa3"/>
+				<box>
+					<pen lineColor="#000000"/>
+					<topPen lineColor="#000000"/>
+					<leftPen lineColor="#000000"/>
+					<bottomPen lineColor="#000000"/>
+					<rightPen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cierre de Caja]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="428" y="11" width="113" height="20" uuid="a4d1a7f9-19ad-468c-b9c1-9c346a69015e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false">
+				<reportElement x="12" y="46" width="509" height="134" uuid="16bf8c07-0df0-45bd-aae4-b52e90bcd8ad"/>
+				<subreportParameter name="auxi">
+					<subreportParameterExpression><![CDATA[$P{auxi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dsreport1})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "RptIngresos.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<summary>
+		<band height="148" splitType="Stretch">
+			<textField>
+				<reportElement x="446" y="119" width="82" height="20" uuid="8ce06c75-2098-49b7-a512-8a3f93cbd0a9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false">
+				<reportElement x="12" y="0" width="509" height="99" uuid="ee3ccc87-2526-4ee2-8b82-3e38bbad26a1"/>
+				<subreportParameter name="auxe">
+					<subreportParameterExpression><![CDATA[$P{auxe}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dsreport2})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "RptEgresos.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="378" y="119" width="68" height="20" uuid="a6b44c30-2570-478b-be57-51f04ddca157"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cierre Caja:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

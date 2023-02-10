@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="965" whenNoDataType="BlankPage" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="0" uuid="93602382-fabb-43fc-bf0b-2ec7db56e96f">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\» Documentos\\Java Proyects\\PryMatricula\\src\\PckReportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="dsreport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="287">
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="135" width="555" height="152" uuid="8dd704ff-5cab-4aaa-b719-4b2aa94e8bf7"/>
+			</frame>
+			<subreport>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="145" width="555" height="142" uuid="ab023755-d4a4-41a6-a614-edcf43f87f70"/>
+				<dataSourceExpression><![CDATA[$F{dsreport}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "RptImpresionBoletaBoletaDetalle.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="330" y="93" width="100" height="20" uuid="a1410a30-78a7-4dc4-8530-21e345e29493"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="42" y="93" width="237" height="20" uuid="773f5cc8-0a08-4d5f-94f0-797be8aa8acb"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="304" y="50" width="140" height="20" uuid="13de69bf-8e7e-4599-8cb6-31a84c0d928b"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

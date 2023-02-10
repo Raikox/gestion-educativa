@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e5b6831-06fe-450a-bc85-20189f10592f">
+	<property name="ireport.zoom" value="1.6500000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="alumno" class="java.lang.String"/>
+	<field name="desc_detalle" class="java.lang.String"/>
+	<field name="fecha_boleta" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="273" splitType="Stretch">
+			<staticText>
+				<reportElement x="108" y="44" width="340" height="30" forecolor="#000000" uuid="cdecafa5-eeb9-4280-b963-f69f0dfcbb6e"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONSTANCIA DE NO ADEUDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="110" width="459" height="20" uuid="915cfe05-bd85-4c5b-bcbb-b7045ec85330">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Por medio del presente documento el director de la Institución Educativa.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="200" width="84" height="20" uuid="915cfe05-bd85-4c5b-bcbb-b7045ec85330">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Que, el alumno]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="152" y="200" width="279" height="20" uuid="7a63c723-39e0-404e-916b-98c001a683c0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alumno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="150" width="103" height="20" uuid="5abc47d7-9ed2-4533-922c-9a8af539c055">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HACE CONSTAR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="200" width="83" height="20" uuid="d220dbe0-e9cb-4df6-a98f-c127fb653fcd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[, no cuenta con]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="220" width="483" height="20" uuid="6ab9d510-169e-4c84-a641-c13a88abdf8d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[deuda pendiente en esta institución a la fecha de emisión de la presente. Habiendo sido ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="240" width="483" height="20" uuid="c651ee69-0dc9-4a4f-954e-53456dee6af4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[realizados sus pagos de la siguiente manera:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="74" y="0" width="220" height="20" uuid="895d5cdd-cf44-4c52-8537-d067d3056c9e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MENSUALIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="0" width="164" height="20" uuid="a2625bae-ab91-4879-a4c6-272648157e1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE PAGO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="294" y="0" width="164" height="20" uuid="5471fee7-521e-4792-987a-4bf3296a6fd9"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_boleta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="0" width="220" height="20" uuid="368aff84-71f3-40f3-b73b-aced27734765"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desc_detalle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="251" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="360" y="100" width="154" height="20" uuid="bca00203-b462-44bf-b077-65b45262339f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="173" y="20" width="343" height="20" uuid="d0f873d4-ab9b-47e1-8962-972d0c54916c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Se expide la presente a solicitud de la parte interesada para los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="40" width="199" height="20" uuid="2e53875a-f1e7-4a17-bca4-9db602c2fe6f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[fines que estime conveniente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="224" width="73" height="20" uuid="5d0c64f5-783f-417f-8643-c306822c65aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Directora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="181" width="187" height="20" uuid="7358427e-693b-45ec-91be-0b7d26394982">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[_____________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="204" width="187" height="20" uuid="6094cf50-3ebb-4c99-9f40-e466fb80ce18">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Dannitsa Menéndez Cohaila]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
